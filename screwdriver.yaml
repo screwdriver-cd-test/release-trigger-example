@@ -1,0 +1,18 @@
+jobs:
+    test-job:
+        image: node:10
+        steps:
+            - echo: echo 'this is test job.'
+        requires: [~commit, ~pr]
+    tag-triggered-job:
+        image: node:10
+        steps:
+            - echo: |
+                echo 'this job is executed by a tag push event.'
+        requires: [~tag]
+    release-triggered-job:
+        image: node:10
+        steps:
+            - echo: |
+                echo 'this job is executed by a release event.'
+        requires: [~release]
