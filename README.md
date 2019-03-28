@@ -27,4 +27,4 @@ jobs:
 
 In the above example, the `release-triggered-job` is started when you create a release.
 
-**Note**: if you create a release with a **new** tag, both `tag-triggered-job` and `release-triggered-job` are executed.
+**Note**: if you create a release with a **new** tag, both of `tag-triggered-job` and `release-triggered-job` are executed.
