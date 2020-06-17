@@ -16,3 +16,9 @@ jobs:
             - echo: |
                 echo 'this job is executed by a release event.'
         requires: [~release]
+    release-triggered-job-v1:
+        image: node:10
+        steps:
+            - echo: |
+                echo 'this job is executed by a release event.'
+        requires: [~release:/^v1/]
